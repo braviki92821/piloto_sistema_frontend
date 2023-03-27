@@ -320,11 +320,14 @@ export function* loginUser() {
 			const token = yield axios.post(urOauth2 + `/oauth/token`, qs.stringify(requestBody), {
 				headers: { validateStatus: () => true, 'Content-Type': 'application/x-www-form-urlencoded' }
 			});
+			console.log(token)
 			localStorage.setItem('token', token.data.access_token);
 			yield put(alertActions.clear());
 			const toke = localStorage.token;
 			let payload = jwt.decode(toke);
+			console.log(payload)
 			const usuario = { id_usuario: payload.idUser };
+			console.log(usuario)
 			usuario['id_usuario'] = payload.idUser;
 
 			const status = yield axios.post(ur + `/validationpassword`, usuario, {
@@ -1397,7 +1400,6 @@ export function* getListSchemaS2() {
 			},
 			validateStatus: () => true
 		});
-
 		yield put(S2Actions.setListS2(respuestaArray.data.results));
 		yield put(S2Actions.setpaginationS2(respuestaArray.data.pagination));
 	}

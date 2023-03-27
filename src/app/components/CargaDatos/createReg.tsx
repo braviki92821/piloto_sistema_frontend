@@ -199,7 +199,9 @@ function MyForm(props: MyFormProps) {
                                     <TextField label="Segundo apellido" name="segundoApellido"/>
                                 </Grid>
                                 <Grid item xs={12} md={3}>
-                                    <Select name="genero" label="Género" data={catalogos.genero}></Select>
+                                    <Select name="genero" label="Género" data={catalogos.genero}>
+                                    
+                                    </Select>
                                 </Grid>
                                 <Grid item xs={12} md={3}>
                                     <TextField label="RFC" name="rfc"/>
