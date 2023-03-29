@@ -172,8 +172,7 @@ export const MenuV =({ vistaRender, match , closeSession }) => {
     const compCrearProovedor=(e)=>{
         setcrearProovedor(true);
     }
-
-
+    
     const rol=localStorage.getItem("rol");
 
     const redirectToRoute = (path) =>{
@@ -199,11 +198,9 @@ export const MenuV =({ vistaRender, match , closeSession }) => {
         setAnchorEl(null);
     };
 
-
     const cerrarSesion  = () => {
         closeSession();
     }
-
 
     function Copyright() {
         return (

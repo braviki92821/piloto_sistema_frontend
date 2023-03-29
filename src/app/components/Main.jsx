@@ -16,12 +16,17 @@ import {bitacoraActions} from "../_actions/bitacora.action";
 import {S3SActions} from "../_actions/s3s.action";
 import {S3PActions} from "../_actions/s3p.action";
 import {ResetPasswordV} from "./Login/ResetPassword";
+import { MainMenu } from './Menu-principal/mainmenu';
 
 export const Main = ()=> (
     <Router history={history}>
         <div>
             <Provider store = {storeValidate}>
                 <div>
+                    <Route exact
+                           path= "/pdaveracruz"
+                           render={() => (<MainMenu/>)}
+                    />
                     <Route exact
                            path= "/login"
                            render={() => (<LoginV/>)}

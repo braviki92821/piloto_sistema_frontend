@@ -192,7 +192,7 @@ return (
           <Grid container spacing={0} className={classes.container1} justify='center'>
             <Grid item xs={12} md={6} className={classes.item2} container direction="row" justify="center" alignItems="center">
               <Typography variant="h4" paragraph className={classes.fontblack} style={{fontWeight: 600}}>
-                Sistema de carga de datos S2 Y S3
+                Acceso a los sistemas de carga
               </Typography>
             </Grid>
           </Grid>

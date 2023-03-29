@@ -159,7 +159,7 @@ export const LoadFileV = () => {
                                     fileInputRef.current.value = "";
                                     setOpen(true);
                                     dispatch(requestErrorsValidation(contentFileJson, system))
-                                }} className={style.boton}>
+                                }}>
                                 Guardar
                             </Button>
                         </Grid>

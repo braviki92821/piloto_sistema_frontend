@@ -49,13 +49,13 @@ function removeSessionLogIn(){
         type: userConstants.USER_SESSION_REMOVE
     }
 }
+
 function deleteUser(id){
     return{
         type: userConstants.DELETE_REQUEST,
         id
     }
 }
-
 
 function deleteUserDo(id){
     return{
@@ -81,8 +81,6 @@ function requestPerPage(objPaginationReq) {
 function setPagination(objPagination){
     return {type : userConstants.PAGINATION_SET , objPagination}
 }
-
-
 
 function setPerPageSucces(users) {
     return {type : userConstants.USERS_PAGINATION_SUCCESS, users}
