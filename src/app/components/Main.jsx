@@ -17,12 +17,22 @@ import {S3SActions} from "../_actions/s3s.action";
 import {S3PActions} from "../_actions/s3p.action";
 import {ResetPasswordV} from "./Login/ResetPassword";
 import { MainMenu } from './Menu-principal/mainmenu';
+import { Spic } from './Menu-principal/spic';
+import { HashRouter, Link } from "react-router-dom";
 
 export const Main = ()=> (
     <Router history={history}>
         <div>
             <Provider store = {storeValidate}>
                 <div>
+                    <Route exact
+                           path= ""
+                           render={() => <Redirect to="/pdaveracruz" />}
+                    />
+                    <Route exact
+                           path= "/"
+                           render={() => <Redirect to="/pdaveracruz" />}
+                    />
                     <Route exact
                            path= "/pdaveracruz"
                            render={() => (<MainMenu/>)}
@@ -34,6 +44,10 @@ export const Main = ()=> (
                     <Route exact
                            path= "/restaurarpassword"
                            render={() => (<ResetPasswordV/>)}
+                    />
+                   <Route exact
+                           path= "/spic"
+                           render={() => (<Spic/>)}
                     />
 
                     <Route exact

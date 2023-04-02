@@ -232,7 +232,6 @@ export const ListS2Schema = () => {
 
     };
 
-
     function diacriticSensitiveRegex(string = '') {
         string = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         return string.replace(/a/g, '[a,á,à,ä]')
@@ -299,7 +298,7 @@ export const ListS2Schema = () => {
 
     const StyledTableCell = withStyles({
         root: {
-            color: '#666666'
+            color: 'black'
         }
     })(TableCell);
 
@@ -413,7 +412,7 @@ export const ListS2Schema = () => {
                 backgroundColor: theme.palette.background.paper
             },
             tableHead: {
-                backgroundColor: '#34b3eb'
+                backgroundColor: '#B22222'
             },
             tableHeaderColumn: {
                 color: '#ffff'
@@ -738,30 +737,6 @@ export const ListS2Schema = () => {
                 </DialogContent>
             </Dialog>
 
-            <Dialog
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-            >
-                <DialogTitle
-                    id="alert-dialog-title">{"¿Seguro que desea eliminar el registro " + nombreUsuario + "?"}</DialogTitle>
-                <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
-                        Los cambios no serán reversibles
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose} color="primary">
-                        Cancelar
-                    </Button>
-                    <Button onClick={() => {
-                        confirmAction(RegistroId)
-                    }} color="primary" autoFocus>
-                        Aceptar
-                    </Button>
-                </DialogActions>
-            </Dialog>
 
             <Grid container>
                 <Grid container justify={"center"}>

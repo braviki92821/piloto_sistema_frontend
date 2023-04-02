@@ -51,7 +51,6 @@ const style = makeStyles((theme) => ({
     dark: "#34b3eb"
   },
 
-
   container1: {
     paddingTop: '75px',
     paddingBottom: '75px',
@@ -89,9 +88,8 @@ const style = makeStyles((theme) => ({
         color: '#FFFFFF'
     },
 
-
     avatar: {
-    margin: theme.spacing(1),
+   
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -129,8 +127,8 @@ const style = makeStyles((theme) => ({
       },}
   },
   boton:{
-    backgroundColor:'#ffe01b',
-    color: '#666666'
+    backgroundColor:'#B22222',
+    color: 'white'
   },
 }));
 
@@ -199,9 +197,7 @@ return (
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-              <Avatar className={classes.avatar}>
-                <LockOutlinedIcon />
-              </Avatar>
+                <img src={require("../assets/logoPlataforma.png").default} />
               <Typography className={classes.fontblack} component="h1" variant="h5">
                 Inicio de sesión
               </Typography>

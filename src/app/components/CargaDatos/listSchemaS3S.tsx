@@ -335,7 +335,7 @@ export const ListS3SSchema = () => {
 
     const StyledTableCell = withStyles({
         root: {
-            color: '#666666'
+            color: 'black'
         }
     })(TableCell);
 
@@ -447,7 +447,7 @@ export const ListS3SSchema = () => {
                 overflowY: 'auto'
             },
             tableHead: {
-                backgroundColor: '#34b3eb'
+                backgroundColor: '#B22222'
             },
             tableHeaderColumn: {
                 color: '#ffff'

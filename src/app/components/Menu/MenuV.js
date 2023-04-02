@@ -24,7 +24,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import MenuItem from '@material-ui/core/MenuItem';
 import BallotIcon from '@material-ui/icons/Ballot';
 import BookmarksIcon from '@material-ui/icons/Bookmarks';
-import LOGO from "../assets/pdn.png";
+import LOGO from "../assets/logoPlataforma.png";
 import { ConnectedCreateProvider } from '../providers/CreateProvider';
 import {history} from "../../store/history";
 import Collapse from '@material-ui/core/Collapse';
@@ -238,7 +238,7 @@ export const MenuV =({ vistaRender, match , closeSession }) => {
         },
         appBar: {
             zIndex: theme.zIndex.drawer + 1,
-            backgroundColor: '#34b3eb',
+            backgroundColor: '#B22222',
             transition: theme.transitions.create(['width', 'margin'], {
                 easing: theme.transitions.easing.sharp,
                 duration: theme.transitions.duration.leavingScreen,
@@ -371,7 +371,6 @@ export const MenuV =({ vistaRender, match , closeSession }) => {
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
                         {'Sistema de Carga de Datos'}<br/>
-                        {'S2 y S3'}
                     </Typography>
                     <div>
                         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>

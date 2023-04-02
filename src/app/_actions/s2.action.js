@@ -4,6 +4,7 @@ export const S2Actions = {
     requestCreationS2,
     setpaginationS2,
     requestListS2,
+    requestPublicList,
     setListS2,
     deleteRecordRequest,
     deleteRecordDo,
@@ -28,6 +29,10 @@ function deleteRecordDo(id){
 
 function requestListS2(filters) {
     return { type: S2Constants.REQUEST_LIST_S2, filters };
+}
+
+function requestPublicList(filters){
+    return { type: S2Constants.REQUEST_PUBLIC_LIST_S2, filters };
 }
 
 function setListS2(list) {

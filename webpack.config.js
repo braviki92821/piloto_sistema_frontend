@@ -1,12 +1,13 @@
 const path = require("path");
 const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin=require('html-webpack-plugin')
 // export default {
 module.exports = {
     mode: 'development',
     node: {
         fs: "empty"
     },
-    entry: path.resolve(__dirname, 'src','app','index.jsx'),
+    entry: path.resolve(__dirname,'src','app','index.jsx'),
     output: {
         globalObject: "this",
         path: path.resolve(__dirname,'dist'),
@@ -55,6 +56,6 @@ module.exports = {
             ]
     },
     plugins: [
-        new Dotenv()
+        new Dotenv(),
     ]
 }

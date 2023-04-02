@@ -1405,6 +1405,22 @@ export function* getListSchemaS2() {
 	}
 }
 
+export function* getPublicListSchemaS2(){
+	while(true){
+		const { filters } = yield take(S2Constants.REQUEST_PUBLIC_LIST_S2)
+		const respuestaArray = yield axios.post(ur + `/listS2public`, filters, {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+			validateStatus: () => true
+		});
+		console.log(filters)
+		yield put(S2Actions.setListS2(respuestaArray.data.results));
+		yield put(S2Actions.setpaginationS2(respuestaArray.data.pagination));
+	}
+}
+
 export function* getListSchemaS3S() {
 	while (true) {
 		const { filters } = yield take(S3SConstants.REQUEST_LIST_S3S);

@@ -301,7 +301,6 @@ export const ListS3PSchema = () => {
         setSelectedCheckBox(newSelected);
     };
 
-
     function diacriticSensitiveRegex(string = '') {
         string = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         return string.replace(/a/g, '[a,á,à,ä]')
@@ -390,7 +389,7 @@ export const ListS3PSchema = () => {
 
     const StyledTableCell = withStyles({
         root: {
-            color: '#666666'
+            color: 'black'
         }
     })(TableCell);
 
@@ -501,7 +500,7 @@ export const ListS3PSchema = () => {
                 overflowY: 'auto'
             },
             tableHead: {
-                backgroundColor: '#34b3eb'
+                backgroundColor: '#B22222'
             },
             tableHeaderColumn: {
                 color: '#ffff'

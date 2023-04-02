@@ -61,7 +61,7 @@
     "yup": "^0.31.0"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --node production",
     "start": "npm run dev",
     "dev": "webpack-dev-server",
     "test": "react-scripts test",

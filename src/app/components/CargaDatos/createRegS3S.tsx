@@ -172,7 +172,7 @@ function MyForm(props: MyFormProps) {
             color: '#585858'
         },
         tableHead: {
-            backgroundColor: '#34b3eb'
+            backgroundColor: '#B22222'
         },
         tableHeaderColumn: {
             color: '#ffff'
