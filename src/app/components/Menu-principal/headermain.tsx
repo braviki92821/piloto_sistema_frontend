@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import * as jquery from 'jquery';
 import {history} from "../../store/history";
 
 export const headerMain = ({}) => {
