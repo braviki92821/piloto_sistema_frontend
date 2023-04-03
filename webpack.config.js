@@ -1,6 +1,5 @@
 const path = require("path");
 const Dotenv = require('dotenv-webpack');
-const HtmlWebpackPlugin=require('html-webpack-plugin')
 // export default {
 module.exports = {
     mode: 'development',

@@ -18,7 +18,6 @@ import {S3PActions} from "../_actions/s3p.action";
 import {ResetPasswordV} from "./Login/ResetPassword";
 import { MainMenu } from './Menu-principal/mainmenu';
 import { Spic } from './Menu-principal/spic';
-import { HashRouter, Link } from "react-router-dom";
 
 export const Main = ()=> (
     <Router history={history}>
