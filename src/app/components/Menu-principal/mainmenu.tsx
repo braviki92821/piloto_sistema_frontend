@@ -1,5 +1,4 @@
 import React from "react";
-import 'bootstrap/dist/js/bootstrap.bundle.js';
 import { history } from "../../store/history";
 import { HeaderMain } from "./headermain";
 import { FooterMain } from "./footermain";
@@ -119,7 +118,6 @@ export const mainMenu = ({})=>{
 
     return(<><HeaderMain/>
               <div className={classes.heroContainer}>
-          
               </div>
               <div className={classes.cards}>
                  <h1 className={classes.special}>Explora los 6 sistemas</h1>
