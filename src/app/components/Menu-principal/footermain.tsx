@@ -76,7 +76,7 @@ export const footerMain=({})=>{
 
     const classes = style();
   
-    return(<>  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
+    return(<> 
                 <div className={classes.footerContainer}>
                    <div className={classes.footerLinks}>
                       <div className={classes.footerLinkWrapper}></div>

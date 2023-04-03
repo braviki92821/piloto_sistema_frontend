@@ -35,8 +35,9 @@ import { forEach } from 'underscore';
 var momento = require('moment-timezone');
 
 const host = process.env.URLAPI;
+const host2= process.env.URL
 const urOauth2 = host + process.env.PORTOAUTH;
-const ur = host + process.env.PORTAPI;
+const ur = host2 + process.env.PORTAPI;
 const clientId = process.env.CLIENTID;
 const clientSecret = process.env.CLIENTSECRET;
 
@@ -327,7 +328,6 @@ export function* loginUser() {
 			let payload = jwt.decode(toke);
 			console.log(payload)
 			const usuario = { id_usuario: payload.idUser };
-			console.log(usuario)
 			usuario['id_usuario'] = payload.idUser;
 
 			const status = yield axios.post(ur + `/validationpassword`, usuario, {
@@ -1415,7 +1415,6 @@ export function* getPublicListSchemaS2(){
 			},
 			validateStatus: () => true
 		});
-		console.log(filters)
 		yield put(S2Actions.setListS2(respuestaArray.data.results));
 		yield put(S2Actions.setpaginationS2(respuestaArray.data.pagination));
 	}
