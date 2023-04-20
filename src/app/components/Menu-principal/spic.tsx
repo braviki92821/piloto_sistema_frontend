@@ -103,8 +103,9 @@ export const spic = ({}) => {
   const [query, setQuery] = React.useState({});
   const [openModalUserInfo, setOpenModalUserInfo] = React.useState(false);
   const [selectedRegistro, setSelectedRegistro] =
-    React.useState<FormDataEsquemaS2>({});
+  React.useState<FormDataEsquemaS2>({});
   const [maxWidth, setMaxWidth] = React.useState<DialogProps["maxWidth"]>("md");
+
   var optionsDate = {
     year: "numeric",
     month: "long",
@@ -142,12 +143,12 @@ export const spic = ({}) => {
       marginRight: "-.9375rem",
     },
     buttonColor: {
-      backgroundColor: "#750000",
+      backgroundColor: "#800000",
       display: "block",
       width: "100%",
       marginRight: "0",
       marginLeft: "0",
-      color: "#FFFAF0",
+      color: "#000000",
     },
     indeterminate: {
       color: "#666666",
@@ -244,7 +245,7 @@ export const spic = ({}) => {
       backgroundColor: theme.palette.background.paper,
     },
     tableHead: {
-      backgroundColor: "#750000",
+      backgroundColor: "#800000",
     },
     tableHeaderColumn: {
       color: "#ffff",
@@ -275,6 +276,17 @@ export const spic = ({}) => {
       paddingLeft: "15px",
       paddingRight: "15px",
     },
+    heroContainer: {
+      background: 'url('+require("../assets/SAEV.jpg").default+') 50%/cover no-repeat',
+      height: '28vh',
+      width: '100%',
+      display:'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      boxShadow:'inset 0 0 0 1000px rgba(0,0,0,.2)',
+      objectFit: 'contain',
+  }
   }));
 
   const StyledTableCell = withStyles({
@@ -378,12 +390,14 @@ export const spic = ({}) => {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossOrigin="anonymous"
-      ></link>
+        crossOrigin="anonymous"></link>
       <HeaderMain />
+      <div className={classes.heroContainer}>
+      </div>
       <div className="container">
         <div className={classes.gridX}>
           <div className={classes.displayTop}>
+
             <h1>Plataforma Digital Estatal</h1>
             <h2>Sistema II</h2>
             <h4>
@@ -429,6 +443,7 @@ export const spic = ({}) => {
                           name="idnombre"
                         />
                       </div>
+                      
                     </div>
                     <div className="row">
                       <div className="col">
@@ -977,7 +992,7 @@ export const spic = ({}) => {
                   </TableRow>
                 </TableHead>
                 {S2List.map((schema) => (
-                  <TableBody>
+                  <TableBody key='spic'>
                     <TableRow key={schema._id}>
                       <StyledTableCell style={{ width: 140 }} align="center">
                         {schema.ejercicioFiscal}
@@ -1058,6 +1073,7 @@ export const spic = ({}) => {
       <FooterMain />
     </>
   );
+
 };
 
 export const Spic = spic;

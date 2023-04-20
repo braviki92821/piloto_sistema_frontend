@@ -46,7 +46,6 @@ export const ListBitacora = () => {
         }
     };
 
-
     const StyledTableCell = withStyles({
         root: {
             color: '#666666'

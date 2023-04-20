@@ -14,7 +14,7 @@ module.exports = {
         publicPath: '/',
     },
     resolve: {
-        extensions: ['.js','.jsx','.tsx','.json','.css']
+        extensions: ['.js','.jsx','.tsx','.json']
     },
     devServer: {
         host:'127.0.0.1',
@@ -26,10 +26,11 @@ module.exports = {
         rules: [{
             test: /\.jsx?/,
             loader:'babel-loader',
-        }, {
-            test: /\.css$/i,
-            loaders: ["style-loader", "css-loader"]
-          },
+            }, 
+            {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+            },
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [

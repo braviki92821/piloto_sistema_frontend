@@ -147,7 +147,7 @@ export const mainMenu = ({})=>{
                    <li className={classes.cardsItem}> 
                        <a  className={classes.cards__item__link}>
                         <figure className={classes.cards__item__picWrap} data-category="Sistema 3">
-                          <img src={require("../assets/sistema3.png").default} alt="" className={classes.cards__item__img} />
+                          <img src={require("../assets/sistema3.png").default} alt="" className={classes.cards__item__img} onClick={ () => redirectToRoute("/s3s")} />
                         </figure>
                         <div className={classes.cards__item__info}>
                             <h5 className={classes.cards__item__text}>Servidores públicos y particulares sancionados</h5>

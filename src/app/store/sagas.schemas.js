@@ -36,8 +36,8 @@ var momento = require('moment-timezone');
 
 const host = process.env.URLAPI;
 const host2= process.env.URL
-const urOauth2 = host + process.env.PORTOAUTH;
-const ur = host2 + process.env.PORTAPI;
+const urOauth2 = host+process.env.PORTOAUTH;
+const ur = host2 +process.env.PORTAPI ;
 const clientId = process.env.CLIENTID;
 const clientSecret = process.env.CLIENTSECRET;
 
@@ -1440,6 +1440,22 @@ export function* getListSchemaS3S() {
 	}
 }
 
+
+export function* getPublicListSchemaS3S(){
+	while (true) {
+		const { filters } = yield take(S3SConstants.REQUEST_PUBLIC_LIST_S3S);
+		const respuestaArray = yield axios.post(ur + `/listS3Spublic`, filters, {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			}
+		});
+
+		yield put(S3SActions.setListS3S(respuestaArray.data.results));
+		yield put(S3SActions.setpaginationS3S(respuestaArray.data.pagination));
+	}
+}
+
 export function* getListSchemaS3P() {
 	while (true) {
 		const { filters } = yield take(S3PConstants.REQUEST_LIST_S3P);
@@ -1455,20 +1471,20 @@ export function* getListSchemaS3P() {
 			}
 		});
 
-		/* const respuestaArrayTipoPersona = yield axios.post(ur + `/getCatalogs`, {docType: "tipoPersona"}, {
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-                'Authorization': `Bearer ${token}`
-            }
-        });
+		yield put(S3PActions.setListS3P(respuestaArray.data.results));
+		yield put(S3PActions.setpaginationS3P(respuestaArray.data.pagination));
+	}
+}
 
-        let arrayFormatS3P = [] ;
-        for(let elementS3P of respuestaArray.data.results){
-            arrayFormatS3P.push(yield formatS3PField(elementS3P,respuestaArrayTipoPersona));
-        }
-                yield put (S3PActions.setListS3P(arrayFormatS3P));
-                */
+export function* getPublicListSchemaS3P(){
+	while (true) {
+		const { filters } = yield take(S3PConstants.REQUEST_PUBLIC_LIST_S3P);
+		const respuestaArray = yield axios.post(ur + `/listS3Ppublic`, filters, {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			}
+		});
 
 		yield put(S3PActions.setListS3P(respuestaArray.data.results));
 		yield put(S3PActions.setpaginationS3P(respuestaArray.data.pagination));

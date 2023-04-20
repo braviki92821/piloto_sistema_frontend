@@ -18,7 +18,8 @@ import {S3PActions} from "../_actions/s3p.action";
 import {ResetPasswordV} from "./Login/ResetPassword";
 import { MainMenu } from './Menu-principal/mainmenu';
 import { Spic } from './Menu-principal/spic';
-
+import { S3S } from './Menu-principal/s3';
+import { S3P } from './Menu-principal/s3p';
 export const Main = ()=> (
     <Router history={history}>
         <div>
@@ -47,6 +48,14 @@ export const Main = ()=> (
                    <Route exact
                            path= "/spic"
                            render={() => (<Spic/>)}
+                    />
+                   <Route exact
+                           path= "/s3s"
+                           render={() => (<S3S/>)}
+                    />
+                   <Route exact
+                          path= "/s3p"
+                          render={() => (<S3P/>)}
                     />
 
                     <Route exact

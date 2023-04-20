@@ -5,6 +5,7 @@ export const S3PActions = {
     requestCreationS3P,
     setpaginationS3P,
     requestListS3P,
+    requestPublicListS3P,
     setListS3P,
     deleteRecordRequest,
     deleteRecordDo,
@@ -30,6 +31,10 @@ function deleteRecordDo(id){
 
 function requestListS3P(filters) {
     return { type: S3PConstants.REQUEST_LIST_S3P, filters };
+}
+
+function requestPublicListS3P(filters){
+    return {type:S3PConstants.REQUEST_PUBLIC_LIST_S3P,filters}
 }
 
 function setListS3P(list) {
