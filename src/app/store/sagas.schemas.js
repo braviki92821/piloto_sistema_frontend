@@ -36,8 +36,8 @@ var momento = require('moment-timezone');
 
 const host = process.env.URLAPI;
 const host2= process.env.URL
-const urOauth2 = host+process.env.PORTOAUTH;
-const ur = host2 +process.env.PORTAPI ;
+const urOauth2 = host;
+const ur = host2;
 const clientId = process.env.CLIENTID;
 const clientSecret = process.env.CLIENTSECRET;
 
