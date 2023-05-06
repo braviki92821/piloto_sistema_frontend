@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  frontend:
+    restart: always
+    container_name: frontend
+    build:
+      context: ~/sistema_pdn/piloto_sistema_frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000

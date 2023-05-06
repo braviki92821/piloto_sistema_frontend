@@ -1856,7 +1856,7 @@ export const s3p = ({}) => {
                             </TableRow>
                         </TableHead>
                         {S3PList.map((schema) => (
-                            <TableBody key="usuarios">
+                            <TableBody>
                                 <TableRow key={schema._id}>
                                     <StyledTableCell style={{width: 140}} align="center">
                                         {schema.expediente}

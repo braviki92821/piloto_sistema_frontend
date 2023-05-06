@@ -14,12 +14,18 @@ module.exports = {
         publicPath: '/',
     },
     resolve: {
-        extensions: ['.js','.jsx','.tsx','.json']
+        extensions: ['.js','.jsx','.tsx','.json'],
+        modules: [
+            path.join(__dirname, "js/helpers"),
+            "node_modules"
+          ]
     },
     devServer: {
-        host:'127.0.0.1',
+        host:'0.0.0.0',
         port: 3000,
-        historyApiFallback: true
+        historyApiFallback: true,
+        public:'braviki92821.com'
+
     },
 
     module: {

@@ -79,7 +79,7 @@ export const spic = ({}) => {
     idnombre?: string;
   }
 
-  const { S2List, alerta, paginationSuper, providerUser } = useSelector(
+  const { S2List, paginationSuper} = useSelector(
     (state) => ({
       S2List: state.S2,
       alerta: state.alert,
@@ -992,7 +992,7 @@ export const spic = ({}) => {
                   </TableRow>
                 </TableHead>
                 {S2List.map((schema) => (
-                  <TableBody key='spic'>
+                  <TableBody>
                     <TableRow key={schema._id}>
                       <StyledTableCell style={{ width: 140 }} align="center">
                         {schema.ejercicioFiscal}

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../piloto_oauth2.0"
+		},
+		{
+			"path": "../../../../piloto_sistema_backend"
+		},
+		{
+			"path": "../../.."
+		}
+	]
+}

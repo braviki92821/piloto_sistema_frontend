@@ -36,8 +36,8 @@ var momento = require('moment-timezone');
 
 const host = process.env.URLAPI;
 const host2= process.env.URL
-const urOauth2 = host;
-const ur = host2;
+const urOauth2 = host + process.env.PORTOAUTH;
+const ur = host2 + process.env.PORTAPI;
 const clientId = process.env.CLIENTID;
 const clientSecret = process.env.CLIENTSECRET;
 
@@ -326,7 +326,6 @@ export function* loginUser() {
 			yield put(alertActions.clear());
 			const toke = localStorage.token;
 			let payload = jwt.decode(toke);
-			console.log(payload)
 			const usuario = { id_usuario: payload.idUser };
 			usuario['id_usuario'] = payload.idUser;
 
