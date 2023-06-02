@@ -321,7 +321,7 @@ export function* loginUser() {
 			const token = yield axios.post(urOauth2 + `/oauth/token`, qs.stringify(requestBody), {
 				headers: { validateStatus: () => true, 'Content-Type': 'application/x-www-form-urlencoded' }
 			});
-			console.log(token)
+
 			localStorage.setItem('token', token.data.access_token);
 			yield put(alertActions.clear());
 			const toke = localStorage.token;
